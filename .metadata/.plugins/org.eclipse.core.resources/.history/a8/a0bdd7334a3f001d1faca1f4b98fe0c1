@@ -1,0 +1,20 @@
+package org.test;
+
+import org.openqa.selenium.WebElement;
+
+public class BaseClassFunctions extends BaseClass{
+	
+	public static void main(String[] args) {
+		BaseClassFunctions b = new BaseClassFunctions();
+		b.browserLaunch("https://www.facebook.com/");
+		//b.browserLaunch("https://www.amazon.in/");
+		//b.browserLaunch("https://www.flipkart.com/");
+		WebElement username = b.findUserName("email");
+		b.sendValues(username,"Poorani");
+		WebElement password = b.findPassword("pass");
+		b.sendPassword(password, "Greens@123")
+		
+		
+	}
+
+}

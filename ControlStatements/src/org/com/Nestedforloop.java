@@ -1,0 +1,20 @@
+package org.com;
+
+public class Nestedforloop {
+//nested for
+
+//
+	public static void main(String[] args) {
+//			step - 1	 2	  8
+		for (int i = 0; i <= 2; i++) {// outer for
+//						3		4	6
+			for (int j = 0; j <= 2; j++) {
+
+//								5	
+				System.out.println(j);
+			}
+//							7
+			System.out.println(i);
+		}
+	}
+}

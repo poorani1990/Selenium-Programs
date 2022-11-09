@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;EmployeePri.java&apos; to &apos;AccessSpecifier/src/org.acc&apos;&#x0D;&#x0A;- Original project: &apos;AccessSpecifier&apos;&#x0D;&#x0A;- Destination element: &apos;AccessSpecifier/src/org.acc&apos;&#x0D;&#x0A;- Original element: &apos;org.acc.EmployeePri.java&apos;" description="Copy compilation unit" destination="/src&lt;org.acc" element1="/src&lt;org.acc{EmployeePri.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1659693016684" units="1" version="1.0"/>
+</session>

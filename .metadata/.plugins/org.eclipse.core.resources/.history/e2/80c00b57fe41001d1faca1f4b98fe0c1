@@ -1,0 +1,32 @@
+package org.test;
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class GetDatafromExcelBaseclassFunction extends GetDatafromExcelthroughFB {
+
+	public static final String getDataFromExcel = null;
+	
+	public static void main(String[] args) throws IOException {
+				
+		GetDatafromExcelBaseclassFunction b = new GetDatafromExcelBaseclassFunction();
+			b.browserLaunch("https://www.facebook.com/");
+			WebElement findUserName = b.findUserName("email");
+			String dataFromExcel = b.getDataFromExcel("C:\\Users\\2047968\\eclipse-workspace\\MavenProj\\src\\test\\resources\\Test.xlsx",
+					"sheet1",2,2);
+			b.sendValues(findUserName, dataFromExcel);
+			b.clear(findUserName);
+			
+		}
+
+}
+	
+
+

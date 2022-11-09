@@ -1,0 +1,54 @@
+package org.test;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class GetDatafromExcelthroughFB {
+
+	WebDriver driver;
+	public void browserLaunch(String url) {
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+	}
+//	Method1
+	
+	public WebElement findUserName(String id) {
+	
+		WebElement element = driver.findElement(By.id(id));
+		return element;
+			}
+
+//	Method2
+	public void sendValues(WebElement element,String data) 
+	{
+	element.sendKeys(data);
+	}	
+
+//	Method 3
+	private void getDataFromExcel() throws IOException {
+		File file = new File("C:\\Users\\2047968\\eclipse-workspace\\MavenProj\\src\\test\\resources\\Test.xlsx");
+		FileInputStream inputstream = new FileInputStream(file);
+		Workbook workbook = new XSSFWorkbook(inputstream);
+		
+		
+	}
+
+}
+	
+
+

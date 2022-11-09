@@ -1,0 +1,14 @@
+package org.test;
+
+public class BaseClassFunctions extends BaseClass{
+	
+	public static void main(String[] args) {
+		BaseClassFunctions b = new BaseClassFunctions();
+		b.browserLaunch("https://www.facebook.com/");
+		b.browserLaunch("https://www.amazon.in/your-account");
+		b.browserLaunch("https://www.flipkart.com/");
+		
+		
+	}
+
+}

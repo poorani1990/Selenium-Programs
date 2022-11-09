@@ -1,0 +1,52 @@
+package org.test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseClass {
+
+	WebDriver driver;
+	public void browserLaunch(String url) {
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+	}
+
+//	Method1
+	
+	public WebElement findUserName(String id) {
+	
+		WebElement element = driver.findElement(By.id(id));
+		return element;
+			}
+
+//	Method2
+	public void sendValues(WebElement element,String data) 
+	{
+	element.sendKeys(data);
+	}
+	
+//	Method3
+	public WebElement findPassword(String id) {
+		
+		WebElement password = driver.findElement(By.id(id));
+		return password;
+	}
+	
+//	Method4
+	private void sendPassword(WebElement password, String data) {
+		password.sendKeys(data);
+
+	}
+	
+//	Method5
+	
+	}
+	
+}
+

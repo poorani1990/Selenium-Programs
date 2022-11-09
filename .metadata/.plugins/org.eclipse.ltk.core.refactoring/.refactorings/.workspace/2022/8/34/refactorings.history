@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;SeleniumMovenDragnDrop&apos;" deleteContents="false" description="Delete resource &apos;SeleniumMovenDragnDrop&apos;" element1="/SeleniumMovenDragnDrop" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1660617508653"/>
+</session>

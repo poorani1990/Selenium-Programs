@@ -1,0 +1,10 @@
+package org.test;
+
+public class ReturnClassB {
+
+	public static void main(String[] args) {
+		ReturnTypeClassA x = new ReturnTypeClassA();
+		int add = x.add(10, 20);
+		System.out.println(add);
+	}
+}

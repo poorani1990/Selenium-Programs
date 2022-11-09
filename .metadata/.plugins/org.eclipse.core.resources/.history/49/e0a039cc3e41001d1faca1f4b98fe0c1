@@ -1,0 +1,29 @@
+package org.test;
+
+import org.openqa.selenium.WebElement;
+
+public class BaseClassFunctions extends BaseClass{
+	
+	public static void main(String[] args) {
+		BaseClassFunctions b = new BaseClassFunctions();
+		b.browserLaunch("https://www.facebook.com/");
+		//b.browserLaunch("https://www.amazon.in/");
+		//b.browserLaunch("https://www.flipkart.com/");
+		WebElement username = b.findUserName("email");
+		b.sendValues(username,"Poorani");
+		WebElement password = b.findPassword("pass");
+		b.sendPassword(password, "Greens@123");
+		WebElement login = b.login("login");
+		b.loginClick(login);
+		WebElement link = b.notYou("//a[text()='Not you?']");
+//		b.rightclick(link);
+//		b.mouseHover(link);
+		WebElement button = b.yesContinue("(//button [@type='submit'])[2]");
+		b.clickContinue(button);
+//		WebElement forgottenPwd = b.forgottenPwd("//a[text()='Forgotten password?']");
+//		b.fgpwdClick(forgottenPwd);
+		
+		
+	}
+
+}

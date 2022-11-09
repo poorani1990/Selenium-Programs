@@ -1,0 +1,14 @@
+package org.pom;
+
+import org.openqa.selenium.support.PageFactory;
+import org.test.BaseClass;
+
+public class LoginPom extends BaseClass {
+	
+	public LoginPom() {
+	 PageFactory.initElements(driver, this);
+		
+		
+	}
+
+}

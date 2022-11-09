@@ -1,0 +1,101 @@
+package org.test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseClass {
+
+	WebDriver driver;
+	public void browserLaunch(String url) {
+		
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+	}
+
+//	Method1
+	
+	public WebElement findUserName(String id) {
+	
+		WebElement element = driver.findElement(By.id(id));
+		return element;
+			}
+
+//	Method2
+	public void sendValues(WebElement element,String data) 
+	{
+	element.sendKeys(data);
+	}
+	
+//	Method3
+	public WebElement findPassword(String id) {
+		
+		WebElement password = driver.findElement(By.id(id));
+		return password;
+	}
+	
+//	Method4
+	public void sendPassword(WebElement password, String data) {
+		password.sendKeys(data);
+
+	}
+	
+//	Method5
+	public WebElement login(String name) {
+		
+		WebElement login = driver.findElement(By.name(name));
+		return login;
+	}
+	
+//	Method 6
+	public void loginClick(WebElement login) {
+				login.click();
+		}
+	
+//	Method 7
+	private Object notYou(String text) {
+		WebElement ny = driver.findElement(By.xpath(text));
+		return ny();
+	}
+
+//	Method 8
+	private void rightclick(WebElement ny) {
+		ny.click();
+
+	}
+
+	
+////	Method7
+//	public WebElement yesContinue(String type) {
+//		WebElement button = driver.findElement(By.xpath(type));
+//		return button;
+//		}
+//	
+////	Method 8
+//	public void clickContinue(WebElement button) {
+//	button.click();
+//}
+//
+////	Method9
+//	public WebElement forgottenPwd(String text) {
+//		
+//		WebElement fgpwd = driver.findElement(By.xpath(text));
+//		return fgpwd;
+//	}
+//
+////	Method 10
+//	public void fgpwdClick(WebElement fgpwd) {
+//		fgpwd.click();
+//	}
+	
+//	Method11
+	
+
+}
+	
+
+

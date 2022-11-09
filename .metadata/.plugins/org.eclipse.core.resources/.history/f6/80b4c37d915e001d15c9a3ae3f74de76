@@ -1,0 +1,64 @@
+package org.TestNG;
+
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class NewTest1 {
+ 
+@BeforeSuite
+private void tc_1() {
+System.out.println("Class A tc_1@BeforeSuite");
+}
+
+@AfterSuite 	
+private void tc_2() {
+System.out.println("Class A tc_2@AfterSuite");
+}
+
+@BeforeTest
+private void tc_3() {
+System.out.println("Class A tc_3@BeforeTest");
+}
+
+@AfterTest
+private void tc_4() {
+System.out.println("Class A tc_4@AfterTest");
+}
+
+@BeforeMethod
+private void tc_5() {
+System.out.println("Class A tc_5 @BeforeMethod");
+}
+
+@AfterMethod
+private void tc_6() {
+System.out.println("Class A tc_6@AfterMethod");
+}
+
+@BeforeClass
+private void tc_7() {
+System.out.println("Class A tc_7@BeforeClass");
+}
+
+@AfterClass
+private void tc_8() {
+System.out.println("Class A tc_8@BeforeClass");
+}
+
+
+@Test
+
+private void tc_9() {
+System.out.println("Class A tc_9@Test");
+}
+
+}
+
