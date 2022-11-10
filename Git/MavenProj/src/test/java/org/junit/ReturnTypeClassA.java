@@ -1,0 +1,23 @@
+package org.junit;
+
+// Create a class name called ClassA
+//	Add- Method, Pass 2 arg & write a business logic to sum 2 numbers
+
+//	Create a class name called ClassB
+//	call -> Add method from ClassA, Check the result of add method is 30 then print valid else invalid]
+
+//	Think in the way return type
+
+public class ReturnTypeClassA {
+	
+//	public int add(int a, int b) {
+	public String add(int a, int b) {
+		int c = a+b;
+		System.out.println(c);
+		
+		//return 100;
+		return "Java";
+
+	}
+
+}
