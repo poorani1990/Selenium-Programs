@@ -12,6 +12,8 @@ public class TestFile {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://en-gb.facebook.com/");
 		driver.manage().window().maximize();
+		WebElement username = driver.findElement(By.id("email"));
+		username.sendKeys("Poorani");
 		//XSSFWorkbook work = new XSSFWorkbook();
 	}
 }
