@@ -12,10 +12,15 @@ public class TestFile {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://en-gb.facebook.com/");
 		driver.manage().window().maximize();
+
+		//XSSFWorkbook work = new XSSFWorkbook();
+
 		WebElement username = driver.findElement(By.id("email"));
 		username.sendKeys("Poorani");
+		
+
 		WebElement pwd= driver.findElement(By.name("pass"));
 		username.sendKeys("Poorani@123");
-		//XSSFWorkbook work = new XSSFWorkbook();
+		
 	}
 }
